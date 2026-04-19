@@ -141,13 +141,6 @@ Type-safe handling of different node types. TypeScript narrows types automatical
 - React Flow 11+ (Graph visualization)
 - Vite (Build tool)
 
-**Patterns Used:**
-- Controlled Components
-- Callback Props
-- Custom Hooks
-- Discriminated Unions
-- Service Layer Abstraction
-
 ---
 
 ## 📈 Performance Optimizations
@@ -180,13 +173,6 @@ Building this project taught me:
 - Performance optimization techniques
 - Component composition strategies
 
-**Time breakdown:**
-- Planning & architecture: 1 hour
-- Implementation: 3 hours
-- Testing & refinement: 1 hour
-- Documentation: 1 hour
-- **Total: ~6 hours**
-
 ---
 
 ## 💭 If I Had More Time
@@ -207,36 +193,6 @@ Building this project taught me:
 
 ---
 
-## 🎤 Presentation Points
-
-**If asked to present this:**
-
-1. **Start with demo** - Show drag, configure, simulate
-2. **Explain architecture** - Component hierarchy, data flow
-3. **Dive into code** - Pick 1-2 interesting files (App.tsx, mockApi.ts)
-4. **Discuss decisions** - Why React Flow, why TypeScript, etc.
-5. **Future improvements** - What would make this production-ready
-
-**Key talking points:**
-- Type safety prevents bugs
-- Modular design enables scaling
-- Mock API simulates real async patterns
-- Validation ensures workflow integrity
-- Extensible architecture for new features
-
----
-
-## 📞 Contact
-
-I'm excited to discuss this project in detail and answer any technical questions.
-
-**Available for:**
-- Code walkthrough
-- Architecture discussion
-- Technical deep dive
-- Live coding session
-
----
 
 ## 🙏 Acknowledgments
 
