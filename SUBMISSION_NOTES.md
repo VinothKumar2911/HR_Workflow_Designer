@@ -1,10 +1,8 @@
 # Submission Notes - HR Workflow Designer
 
-**Candidate:** [Your Name]  
-**Email:** [Your Email]  
-**GitHub:** [Your GitHub Username]  
-**Date:** [Current Date]  
-
+**Candidate:** Vinoth Kumar S  
+**Email:** samuthirarajvinoth@gmail.com
+**GitHub:**  https://github.com/VinothKumar2911  
 ---
 
 ## 🎯 Submission Summary
