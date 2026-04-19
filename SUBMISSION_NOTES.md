@@ -100,7 +100,6 @@ Adding a new node type requires:
 3. Register in `App.tsx` nodeTypes
 4. Add form case in `NodeConfigPanel.tsx`
 
-Takes ~15 minutes.
 
 ### **3. Advanced Features**
 - Cycle detection using DFS algorithm
