@@ -69,7 +69,7 @@ This is my solution for the Tredence Analytics Full Stack Engineering Internship
 
 ```bash
 # Clone the repository
-git clone [your-repo-url]
+git clone 
 
 # Navigate to project
 cd hr-workflow-designer
