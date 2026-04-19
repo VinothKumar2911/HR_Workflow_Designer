@@ -339,33 +339,6 @@ Implemented validation checks:
 
 ---
 
-## 🧠 Key Technical Decisions
-
-### **Why React Flow over D3.js?**
-- Built specifically for node-based editors
-- Handles positioning, zoom, pan out of the box
-- Better TypeScript support
-- Cleaner API for this use case
-
-### **Why Vite over Create React App?**
-- 10-100x faster HMR
-- Smaller bundle sizes
-- Modern ESM-based build
-- Better TypeScript support
-
-### **Why Mock API instead of hardcoded data?**
-- Simulates real-world async patterns
-- Easy to replace with actual backend
-- Tests async state management
-- More realistic development experience
-
-### **Why no state management library?**
-- Application state is simple and localized
-- React Flow manages graph state
-- Form state is component-local
-- Avoiding unnecessary complexity
-
----
 
 ## 📚 Learning Resources
 
