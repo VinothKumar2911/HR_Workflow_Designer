@@ -21,7 +21,7 @@ npm run dev
 npm run build
 ```
 
-Open [http://localhost:5173](http://localhost:5173) to view the application.
+Open the link to view the application.
 
 ---
 
@@ -375,25 +375,6 @@ If you want to understand this codebase:
 2. **TypeScript Handbook:** [typescriptlang.org](https://www.typescriptlang.org/docs/)
 3. **React Flow Docs:** [reactflow.dev](https://reactflow.dev)
 4. **Vite Guide:** [vitejs.dev](https://vitejs.dev/guide/)
-
----
-
-## 🙋 Questions I Anticipated
-
-**Q: Why TypeScript instead of JavaScript?**  
-A: Type safety catches bugs at compile time, better IDE support, self-documenting code, required by case study.
-
-**Q: How extensible is this for new node types?**  
-A: Very. Add interface to `types/workflow.ts`, create component, register in `nodeTypes`, add form case.
-
-**Q: Can this handle large workflows (100+ nodes)?**  
-A: Yes. React Flow is optimized for large graphs. Would recommend virtualization at 500+ nodes.
-
-**Q: How do you handle form validation?**  
-A: Currently basic HTML5 validation. Would add Zod/Yup for complex validation in production.
-
-**Q: What about mobile support?**  
-A: Works on tablets. Phone support would need responsive redesign of sidebar/panels.
 
 ---
 
