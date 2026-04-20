@@ -3,8 +3,6 @@
 A visual workflow builder for HR processes built with React, TypeScript, and React Flow.
 
 **Built for:** Tredence Analytics Full Stack Engineering Internship Case Study  
-**Time Investment:** 4-6 hours  
-**Author:** [Your Name]
 
 ---
 
