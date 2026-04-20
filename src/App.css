@@ -678,3 +678,247 @@ body {
 .custom-node {
   font-family: inherit;
 }
+
+
+.workflow-name-input {
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.15);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  outline: none;
+  transition: all 0.2s;
+  width: 180px;
+}
+
+.workflow-name-input::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.workflow-name-input:focus {
+  background: rgba(255,255,255,0.25);
+  border-color: white;
+}
+
+.header-actions button {
+  padding: 0.65rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.header-actions button:first-of-type {
+  background: #10b981;
+  color: white;
+}
+
+.header-actions button:first-of-type:hover {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+.stats {
+  background: rgba(255,255,255,0.15);
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.guide-popup {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 380px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  z-index: 100;
+  animation: fadeInScale 0.3s ease;
+}
+
+.guide-popup h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #1f2937;
+}
+
+.guide-popup p {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin-bottom: 0.75rem;
+}
+
+.guide-popup ul {
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.guide-popup li {
+  font-size: 0.85rem;
+  color: #374151;
+  margin-bottom: 0.4rem;
+}
+
+.guide-popup button {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 8px;
+  background: #667eea;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.guide-popup button:hover {
+  background: #5a67d8;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+.react-flow__edge-path {
+  stroke-width: 2;
+  stroke-dasharray: 5;
+  animation: dashFlow 1s linear infinite;
+}
+
+@keyframes dashFlow {
+  to {
+    stroke-dashoffset: -10;
+  }
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.app-header {
+  backdrop-filter: blur(10px);
+}
+
+/* Overlay */
+.confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+  animation: fadeIn 0.2s ease-in;
+}
+
+/* Modal */
+.confirm-modal {
+  width: 380px;
+  background: white;
+  padding: 1.8rem;
+  border-radius: 14px;
+  text-align: center;
+
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+
+  /* 🔥 IMPORTANT: NO translate(-50%) here */
+  animation: modalPop 0.25s ease-out;
+}
+
+/* Text */
+.confirm-modal h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.confirm-modal p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 1.2rem;
+}
+
+/* Buttons */
+.confirm-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.confirm-actions button {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* Save */
+.save-btn {
+  background: #10b981;
+  color: white;
+}
+.save-btn:hover {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+/* Discard */
+.discard-btn {
+  background: #ef4444;
+  color: white;
+}
+.discard-btn:hover {
+  background: #dc2626;
+}
+
+/* Cancel */
+.cancel-btn {
+  background: #e5e7eb;
+  color: #374151;
+}
+.cancel-btn:hover {
+  background: #d1d5db;
+}
+
+/* 🔥 Smooth fade */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 🔥 FIXED animation (no shifting issue) */
+@keyframes modalPop {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}

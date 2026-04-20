@@ -51,6 +51,10 @@ function App() {
   const [showSimulator, setShowSimulator] = useState(false);
   const [automations, setAutomations] = useState<AutomationAction[]>([]);
 
+  const [workflowName, setWorkflowName] = useState("Untitled Workflow");
+  const [showGuide, setShowGuide] = useState(true);
+  const [showConfirm, setShowConfirm] = useState(false);
+
   
   useEffect(() => {
     const loadAutomations = async () => {
@@ -61,7 +65,14 @@ function App() {
   }, []);
 
   const onConnect = useCallback(
-    (params: Connection) => setEdges((eds) => addEdge(params, eds)),
+    (params: Connection) => setEdges((eds) => addEdge(
+  {
+    ...params,
+    animated: true,
+    style: { stroke: "#6366f1" }
+  },
+  eds
+)),
     [setEdges]
   );
 
@@ -173,7 +184,17 @@ function App() {
   const handleClosePanel = useCallback(() => {
     setSelectedNode(null);
   }, []);
-
+const handleSaveWorkflow = () => {
+  localStorage.setItem(
+    "workflow",
+    JSON.stringify({ nodes, edges, workflowName })
+  );
+};
+const handleNewWorkflow = () => {
+  setNodes([]);
+  setEdges([]);
+  setWorkflowName("Untitled Workflow");
+};
   // Handle keyboard delete
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -200,19 +221,94 @@ function App() {
           <h1>HR Workflow Designer</h1>
           <p>Visual workflow builder for HR processes</p>
         </div>
-        <div className="header-actions">
+        {/* <div className="header-actions">
           <button 
             className="simulator-toggle"
             onClick={() => setShowSimulator(!showSimulator)}
           >
             {showSimulator ? '📊 Hide Simulator' : '🧪 Test Workflow'}
           </button>
-        </div>
-      </header>
+        </div> */}
+        <div className="header-actions">
+  <input
+    type="text"
+    value={workflowName}
+    onChange={(e) => setWorkflowName(e.target.value)}
+    placeholder="Enter workflow name"
+    className="workflow-name-input"
+  />
 
+  <button
+   onClick={() => setShowConfirm(true)}
+  >
+    ➕ New Workflow
+  </button>
+<div className="stats">
+  Nodes: {nodes.length} | Edges: {edges.length}
+</div>
+  <button 
+    className="simulator-toggle"
+    onClick={() => setShowSimulator(!showSimulator)}
+  >
+    {showSimulator ? '📊 Hide Simulator' : '🧪 Test Workflow'}
+  </button>
+</div>
+      </header>
+{showConfirm && (
+  <div className="confirm-overlay">
+    <div className="confirm-modal">
+      <h3>Save current workflow?</h3>
+      <p>You have unsaved changes. What do you want to do?</p>
+
+      <div className="confirm-actions">
+        <button
+          className="save-btn"
+          onClick={() => {
+            handleSaveWorkflow();
+            handleNewWorkflow();
+            setShowConfirm(false);
+          }}
+        >
+          💾 Save & Continue
+        </button>
+
+        <button
+          className="discard-btn"
+          onClick={() => {
+            handleNewWorkflow();
+            setShowConfirm(false);
+          }}
+        >
+          ❌ Don't Save
+        </button>
+
+        <button
+          className="cancel-btn"
+          onClick={() => setShowConfirm(false)}
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+)}
       <div className="app-content">
         <Sidebar />
-        
+        {showGuide && (
+  <div className="guide-popup">
+    <h2>👋 Welcome to Workflow Designer</h2>
+    <p>This tool helps you build workflows visually.</p>
+    <ul>
+      <li>Drag nodes from sidebar</li>
+      <li>Connect nodes using edges</li>
+      <li>Click nodes to configure</li>
+      <li>Run simulation to test</li>
+    </ul>
+    <button onClick={() => setShowGuide(false)}>Got it</button>
+  </div>
+)}
+
+
         <div className="canvas-container" ref={reactFlowWrapper}>
           <ReactFlow
             nodes={nodes}
