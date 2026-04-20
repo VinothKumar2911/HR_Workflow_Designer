@@ -238,6 +238,32 @@ Implemented validation checks:
 - ✅ **Keyboard shortcuts** - Delete key to remove nodes
 - ✅ **Real-time validation feedback** - Immediate error display
 
+### 🚀 Additional Features Implemented (Enhancements)
+
+- ✏️ **Workflow Naming**
+  - Users can rename workflows directly from the header
+
+- ➕ **New Workflow Creation with Confirmation**
+  - Modal prompts:
+    - Save & Continue
+    - Don’t Save
+    - Cancel
+
+- 🧭 **First-Time User Guide**
+  - Onboarding popup explaining how to use the application
+
+- 📊 **Live Workflow Stats**
+  - Displays number of nodes and edges in real-time
+
+- 🌊 **Animated Edge Flow**
+  - Visual animation for workflow connections
+
+- 🧠 **Dynamic Metadata Input**
+  - Users can define custom key-value pairs instead of static fields
+
+- 💾 **Local Storage Persistence**
+  - Workflows can be saved in browser storage
+
 ---
 
 ## 🧪 How to Use
@@ -251,6 +277,8 @@ Implemented validation checks:
 5. **Test Workflow:** Click "Test Workflow" to open the simulator
 6. **Run Simulation:** Click "Run Simulation" to validate and execute
 7. **Export:** Use "Export Workflow" to save as JSON
+8. **Create New Workflow:** Use the header button with save confirmation
+9. **Rename Workflow:** Edit the workflow name directly in the header
 
 ### **Example Workflow: Employee Onboarding**
 
@@ -284,6 +312,15 @@ Implemented validation checks:
 ---
 
 ## 🎨 Design System
+
+### 🎯 UI/UX Enhancements
+
+- Smooth modal animations for workflow actions
+- Interactive onboarding guide for first-time users
+- Clean header with workflow naming support
+- Real-time node and edge count display
+- Animated edge transitions for better visualization
+- Sidebar-based drag-and-drop interaction
 
 ### **Color Palette**
 - Start Node: `#10b981` (Green) - Represents beginning
@@ -331,7 +368,7 @@ Implemented validation checks:
 
 ## 🐛 Known Limitations
 
-1. **No persistence** - Workflows lost on refresh (as per requirements)
+1. **Local persistence only** - Workflows saved in browser (no backend storage)
 2. **No authentication** - No user management (as per requirements)
 3. **Client-side only** - No backend server (as per requirements)
 4. **Limited validation** - Basic cycle detection only
@@ -385,6 +422,16 @@ This solution demonstrates:
 - ✅ **UX Polish** - Smooth animations, clear visual feedback
 
 
+
+---
+## 📈 Project Impact
+
+- Demonstrates real-world workflow automation concepts
+- Showcases advanced UI/UX design using React Flow
+- Implements dynamic data handling and graph-based logic
+- Reflects production-level frontend architecture
+
+This project goes beyond basic CRUD applications and focuses on building an interactive SaaS-like experience.
 
 ---
 
