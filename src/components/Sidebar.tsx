@@ -46,7 +46,7 @@ export const Sidebar = () => {
         <ul>
           <li>Click a node to configure it</li>
           <li>Connect nodes by dragging from handles</li>
-          <li>Delete nodes with Delete/Backspace key</li>
+          <li>Delete nodes with Delete/Backspace and for edges use Backspace key</li>
           <li>Test your workflow in the simulator</li>
         </ul>
       </div>
